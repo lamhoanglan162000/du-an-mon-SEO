@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <header class="navbar">
@@ -33,12 +34,12 @@
 
     <section id="products" class="products-section">
       <div class="section-title">
-        <h2>Sản Phẩm Nổi Bật</h2>
+        <h2>Các dòng sản phẩm mà nhóm 7 đang kinh doanh</h2>
         <div class="underline"></div>
       </div>
 
       <div class="product-grid">
-        <div class="product-card">
+        <div class="product-card" data-aos="fade-right" data-aos-delay="0">
           <img
             src="lồng_đèn_truyền_thống-removebg-preview.png"
             alt="Lồng đèn truyền thống"
@@ -54,7 +55,7 @@
           </button>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-aos="fade-left" data-aos-delay="200">
           <img
             src="lồng_đèn_hiện_đại-removebg-preview.png"
             alt="Lồng đèn hiện đại"
@@ -71,7 +72,7 @@
           </button>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-aos="zoom-in" data-aos-delay="400">
           <img
             src="phát_sáng-removebg-preview.png"
             alt="Lồng đèn phát sáng"
@@ -181,7 +182,7 @@
       const SCRIPT_URL =
         "https://script.google.com/macros/s/AKfycbxnhPT1-P-mpF-PW6p3AKicEy6I_kxoJLlCUr1Q1nbaumdXLuGHW5UrqvbC-nKXcBGH/exec";
 
-      // Mở popup khi nhấn "Đặt Mua"
+      // Mở popup khi khi có người bấm chữ "Đặt Mua"
       buyButtons.forEach((button) => {
         button.addEventListener("click", function () {
           const productName = this.getAttribute("data-product");
@@ -239,6 +240,14 @@
             btnSubmit.innerText = "Xác Nhận Đặt Hàng";
             btnSubmit.disabled = false;
           });
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Kích hoạt hiệu ứng
+      AOS.init({
+        duration: 1000, // Thời gian chạy hiệu ứng (1000ms = 1 giây)
+        once: true, // Chỉ chạy hiệu ứng 1 lần khi lướt tới
       });
     </script>
   </body>
