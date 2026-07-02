@@ -196,6 +196,58 @@ body {
   background-color: #990000;
 }
 
+/* --- PHẦN TẠI SAO CHỌN CHÚNG TÔI --- */
+.why-choose-us-section {
+  padding: 60px 0;
+  background-color: #fff9f5; /* Màu nền vàng cam nhạt ấm áp, làm nổi bật khối thông tin */
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Chia đều 3 cột trên màn hình lớn */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ tạo cảm giác 3D */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng nổi lên và có ánh đỏ nhẹ khi khách rê chuột vào */
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(220, 53, 69, 0.15);
+}
+
+.feature-icon {
+  font-size: 3.5rem; /* Kích thước icon to rõ ràng */
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  font-size: 1.15rem;
+  color: #333;
+  line-height: 1.6;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* --- RESPONSIVE CHO ĐIỆN THOẠI & TABLET --- */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr; /* Tự động thu về 1 cột dọc trên màn hình nhỏ */
+    gap: 20px;
+  }
+}
 /* ========================================== */
 /* 4. CHÂN TRANG (FOOTER) */
 /* ========================================== */
