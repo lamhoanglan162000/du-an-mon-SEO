@@ -90,7 +90,7 @@
       </div>
     </section>
 
-    <!-- PHẦN THÊM VÀO: TẠI SAO CHỌN CHÚNG TÔI -->
+    <!--TẠI SAO CHỌN CHÚNG TÔI -->
     <section id="why-choose-us" class="why-choose-us-section">
       <!-- Tiêu đề dùng lại class cũ để đồng bộ thiết kế -->
       <div class="section-title" data-aos="fade-down">
@@ -98,19 +98,19 @@
         <div class="underline"></div>
       </div>
       <div class="features-grid">
-        <!-- Điểm 1 -->
+        <!-- Lý do 1 -->
         <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
           <div class="feature-icon">🎋</div>
           <p>Khung tre chắc chắn, không mối mọt.</p>
         </div>
 
-        <!-- Điểm 2 -->
+        <!-- Lý do 2 -->
         <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
           <div class="feature-icon">✨</div>
           <p>Giấy kiếng bóng kính cao cấp, màu đỏ tươi tắn.</p>
         </div>
 
-        <!-- Điểm 3 -->
+        <!-- Lý do 3 -->
         <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
           <div class="feature-icon">🛡️</div>
           <p>
@@ -208,11 +208,11 @@
       const form = document.getElementById("orderForm");
       const btnSubmit = document.getElementById("btnSubmit");
 
-      // ⚠️ QUAN TRỌNG: Dán link Web App từ Google Apps Script của bạn vào đây
+      // Nhận link Web App từ Google Apps Script
       const SCRIPT_URL =
         "https://script.google.com/macros/s/AKfycbxnhPT1-P-mpF-PW6p3AKicEy6I_kxoJLlCUr1Q1nbaumdXLuGHW5UrqvbC-nKXcBGH/exec";
 
-      // Mở popup khi khi có người bấm chữ "Đặt Mua"
+      // Mở popup khi khi có người bấm nút "Đặt Mua"
       buyButtons.forEach((button) => {
         button.addEventListener("click", function () {
           const productName = this.getAttribute("data-product");
@@ -222,7 +222,7 @@
         });
       });
 
-      // Đóng popup khi nhấn nút X
+      // Đóng popup khi có người nhấn nút X
       closeButton.addEventListener("click", function () {
         modal.style.display = "none";
       });

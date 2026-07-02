@@ -51,7 +51,7 @@ body {
 /* 2. BANNER CHÍNH (HERO SECTION) */
 /* ========================================== */
 .hero-banner {
-  /* Hình nền lồng đèn Hội An chìm dưới lớp phủ màu đỏ */
+  /* Hình nền nhiều lồng đèn chìm dưới lớp phủ màu đỏ */
   background:
     linear-gradient(rgba(153, 0, 0, 0.85), rgba(204, 0, 0, 0.85)),
     url("lồng\ đèn\ trung\ thu.jpg") no-repeat center center/cover;
@@ -156,7 +156,7 @@ body {
   transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển động mượt */
 }
 
-/* Tùy chọn: Thêm hiệu ứng phóng to ảnh nhẹ khi khách rê chuột vào thẻ sản phẩm */
+/* Tùy chọn: Tạo effect phóng to ảnh nhẹ khi rê chuột vào thẻ sản phẩm */
 .product-card:hover .product-img {
   transform: scale(1.05); /* Phóng to ảnh thêm 5% */
 }
@@ -222,7 +222,7 @@ body {
     box-shadow 0.3s ease;
 }
 
-/* Hiệu ứng nổi lên và có ánh đỏ nhẹ khi khách rê chuột vào */
+/* Tạo effect khi rê chuột vào */
 .feature-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(220, 53, 69, 0.15);
