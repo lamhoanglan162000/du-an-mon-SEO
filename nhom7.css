@@ -54,7 +54,7 @@ body {
   /* Hình nền nhiều lồng đèn chìm dưới lớp phủ màu đỏ */
   background:
     linear-gradient(rgba(153, 0, 0, 0.85), rgba(204, 0, 0, 0.85)),
-    url("lồng\ đèn\ trung\ thu.jpg") no-repeat center center/cover;
+    url("banner\ 2.png") no-repeat center center/cover;
   height: 70vh;
   display: flex;
   justify-content: center;
