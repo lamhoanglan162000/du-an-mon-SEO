@@ -604,3 +604,230 @@ body {
     padding: 20px;
   }
 }
+/* --- PHẦN GÓC CHIA SẺ (PHONG CÁCH TẠP CHÍ) --- */
+.blog-section {
+  padding: 60px 0;
+  background-color: #fcf8f5; /* Màu nền kem nhạt ấm áp */
+}
+
+.blog-magazine-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* Cột trái to hơn cột phải một chút */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 1. ĐỊNH DẠNG BÀI VIẾT NỔI BẬT (TRÁI) */
+.featured-post {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.featured-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(220, 53, 69, 0.12);
+}
+
+.featured-img-box {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.featured-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.featured-post:hover .featured-img {
+  transform: scale(1.05);
+}
+
+.blog-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #dc3545; /* Đỏ chủ đạo */
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.featured-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blog-date {
+  font-size: 0.85rem;
+  color: #888888;
+  margin-bottom: 8px;
+}
+
+.featured-content h3 {
+  font-size: 1.35rem;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.featured-content h3 a {
+  color: #111111;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.featured-content h3 a:hover {
+  color: #dc3545;
+}
+
+.featured-content p {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.btn-read-featured {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: #dc3545;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn-read-featured:hover {
+  background-color: #b02a37;
+  transform: translateX(3px);
+}
+
+/* 2. ĐỊNH DẠNG DANH SÁCH BÀI PHỤ (PHẢI) */
+.side-posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.side-post-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.side-post-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.side-post-img-box {
+  width: 110px;
+  height: 85px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.side-post-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.side-post-card:hover .side-post-img-box img {
+  transform: scale(1.08);
+}
+
+.side-post-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-post-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ff9900; /* Vàng cam nổi bật */
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.side-post-info h4 {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.side-post-info h4 a {
+  color: #222222;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.side-post-info h4 a:hover {
+  color: #dc3545;
+}
+
+.side-post-date {
+  font-size: 0.8rem;
+  color: #999999;
+}
+
+/* --- RESPONSIVE TỰ ĐỘNG --- */
+@media (max-width: 992px) {
+  .blog-magazine-container {
+    grid-template-columns: 1fr; /* Tự co về 1 cột trên iPad & Điện thoại */
+    gap: 25px;
+  }
+
+  .featured-img-box {
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .side-post-card {
+    gap: 10px;
+  }
+
+  .side-post-img-box {
+    width: 85px;
+    height: 75px;
+  }
+
+  .side-post-info h4 {
+    font-size: 0.88rem;
+  }
+}
+
